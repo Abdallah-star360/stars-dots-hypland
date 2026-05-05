@@ -54,6 +54,11 @@ ApplicationWindow {
             icon: "settings",
             component: "modules/settings/ServicesConfig.qml"
         },
+	{
+	    name: Translation.tr("Glass"),
+    		icon: "blur_on",
+            component: "modules/settings/GlassConfig.qml"
+	},
         {
             name: Translation.tr("Advanced"),
             icon: "construction",
