@@ -329,7 +329,7 @@ Singleton {
                 property real hoverRegionHeight: 2
                 property bool pinnedOnStartup: false
                 property bool hoverToReveal: true // When false, only reveals on empty workspace
-                property list<string> pinnedApps: [ "org.kde.dolphin", "kitty", "firefox", "com.google.Chrome", "org.wireshark.Wireshark", "jetbrains-toolbox"]
+                property list<string> pinnedApps: [ "kitty", "firefox", "com.google.Chrome", "org.wireshark.Wireshark", "burpsuite", "com.obsproject.Studio"]
                 property list<string> ignoredAppRegexes: []
             }
 
@@ -355,7 +355,7 @@ Singleton {
             }
 
             property JsonObject launcher: JsonObject {
-                property list<string> pinnedApps: [ "org.kde.dolphin", "kitty", "firefox", "com.google.Chrome", "org.wireshark.Wireshark", "jetbrains-toolbox"]
+                property list<string> pinnedApps: [ "kitty", "firefox", "com.google.Chrome", "org.wireshark.Wireshark", "burpsuite", "com.obsproject.Studio"]
             }
 
             property JsonObject light: JsonObject {
