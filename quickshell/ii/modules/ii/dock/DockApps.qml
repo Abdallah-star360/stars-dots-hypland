@@ -51,12 +51,15 @@ Item {
             values: TaskbarApps.apps
         }
         delegate: DockAppButton {
+            id: dockBtn
             required property var modelData
             appToplevel: modelData
             appListRoot: root
 
             topInset: Appearance.sizes.hyprlandGapsOut + root.buttonPadding
             bottomInset: Appearance.sizes.hyprlandGapsOut + root.buttonPadding
+
+
         }
     }
 

@@ -78,8 +78,6 @@ DockButton {
         TaskbarApps.togglePin(appToplevel.appId);
     }
 
-
-
     contentItem: Loader {
         active: !isSeparator
         sourceComponent: Item {

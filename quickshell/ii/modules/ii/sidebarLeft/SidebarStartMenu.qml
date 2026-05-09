@@ -92,6 +92,7 @@ Item {
 
         // Start page apps - Flickable بيشغل بس لما مش searching
         Flickable {
+            id: appsFlickable
             Layout.fillWidth: true
             Layout.fillHeight: true
             visible: !root.searching
@@ -101,9 +102,19 @@ Item {
             clip: true
 
             StartPageApps {
+                id: startApps
                 width: parent.width
                 height: 900
             }
+
+            onVisibleChanged: {
+                if (visible) {
+                    contentY = 1
+                    contentY = 0
+                }
+            }
+
+
         }
 
         // Footer ثابت في الأسفل دايماً

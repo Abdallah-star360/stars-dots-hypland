@@ -13,6 +13,8 @@ import qs.modules.waffle.looks
 BodyRectangle {
     id: root
 
+
+
     ColumnLayout {
         anchors {
             fill: parent
@@ -37,8 +39,15 @@ BodyRectangle {
 
         BigAppGrid {
             Layout.fillWidth: true
-            columns: 8
-            desktopEntries: Config.options.launcher.pinnedApps.map(appId => DesktopEntries.byId(appId))
+            columns: 4
+            desktopEntries: {
+                let entries = [];
+                for (let id of Config.options.launcher.pinnedApps) {
+                    let e = DesktopEntries.byId(id);
+                    if (e) entries.push(e);
+                }
+                return entries;
+            }
         }
     }
 
